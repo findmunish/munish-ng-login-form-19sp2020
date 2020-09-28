@@ -55,5 +55,5 @@
     <app-fetch-http *ngIf="isFetchHttp"> </app-fetch-http>
     <app-display-fetched-customers *ngIf="isDisplayForm"> </app-display-fetched-customers>
     <app-login-form *ngIf="isLoginForm" (isUserAuthenticated)='setAuthentication($event)'> </app-login-form>
-    <app-showusers></app-showusers>
+    <app-showusers *ngIf="isUsersForm"></app-showusers>
   </div>
