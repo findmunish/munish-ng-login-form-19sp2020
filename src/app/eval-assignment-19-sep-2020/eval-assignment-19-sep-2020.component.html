@@ -5,7 +5,7 @@
       <td> 
         <button
           [disabled]="!authenticationObj.success"
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           [ngClass]='{"btn-dark": display==="form"}'
           (click)="FetchCustomerData()">Form
         </button>
@@ -13,14 +13,14 @@
       <td>
         <button
           [disabled]="!authenticationObj.success"
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           (click)="FetchDataFromHttpClient()">Api
         </button>
       </td>
       <td>
         <button
           [disabled]="!(authenticationObj.success === true && isCustomersExist === true)"
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           [ngClass]='{"btn-dark": display==="display"}'
           (click)="DisplayCustomerData()">Display
         </button>
@@ -28,14 +28,14 @@
       <td>
         <button
           [disabled]="authenticationObj.success"
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           [ngClass]='{"btn-dark": display==="login"}'
           (click)="Login()">Login
         </button>
       </td>
       <td>
         <button
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           [disabled]="!authenticationObj.success"
           (click)="Logout()">Logout
         </button>
@@ -43,7 +43,7 @@
       <td>
         <button
           [disabled]="authenticationObj.success"
-          class="btn btn-primary"
+          class="btn btn-primary right-spacing"
           [ngClass]='{"btn-dark": display==="users"}'
           (click)="showUsers()">Show Users
         </button>
