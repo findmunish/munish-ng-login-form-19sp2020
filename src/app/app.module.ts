@@ -12,10 +12,11 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FetchHttpComponent } from './fetch-http/fetch-http.component';
 import { FetchCustomersComponent } from './fetch-customers/fetch-customers.component';
 import { CustomerDataServiceService } from './customer-data-service.service';
+import { ShowusersComponent } from './showusers/showusers.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
-  declarations: [ AppComponent, HelloComponent, EvalAssignment19Sep2020Component, DisplayFetchedCustomersComponent, LoginFormComponent, FetchHttpComponent, FetchCustomersComponent ],
+  declarations: [ AppComponent, HelloComponent, EvalAssignment19Sep2020Component, DisplayFetchedCustomersComponent, LoginFormComponent, FetchHttpComponent, FetchCustomersComponent, ShowusersComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CustomerDataServiceService]
 })

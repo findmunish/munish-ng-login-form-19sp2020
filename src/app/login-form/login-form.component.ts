@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import{ USERS } from '../userList';
 
 @Component({
   selector: 'app-login-form',
@@ -9,10 +10,7 @@ export class LoginFormComponent implements OnInit {
 
   constructor() { }
 
-  users = [{id: "munish", password: '1234'},
-            {id: "rakesh", password: '5678'},
-            {id: "ramesh", password: 'ramesh'},
-            {id: "subodh", password: 'subodh'}]
+  users = USERS;
   ngOnInit() {
   }
   @Output() isUserAuthenticated = new EventEmitter()

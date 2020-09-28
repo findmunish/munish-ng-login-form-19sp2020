@@ -1,5 +1,3 @@
-<p> eval-assignment-19-sep-2020 works! </p>
-
 <div class="jumbotron">
   <h1 *ngIf="authenticationObj.success">Welcome {{authenticationObj.userName}}</h1>
   <table style="width:100%" border="0px">
@@ -29,6 +27,7 @@
       </td>
       <td>
         <button
+          [disabled]="authenticationObj.success"
           class="btn btn-primary"
           [ngClass]='{"btn-dark": display==="login"}'
           (click)="Login()">Login
@@ -41,6 +40,14 @@
           (click)="Logout()">Logout
         </button>
       </td>
+      <td>
+        <button
+          [disabled]="authenticationObj.success"
+          class="btn btn-primary"
+          [ngClass]='{"btn-dark": display==="users"}'
+          (click)="showUsers()">Show Users
+        </button>
+      </td>
     </tr>
   </table>
 
@@ -48,4 +55,5 @@
     <app-fetch-http *ngIf="isFetchHttp"> </app-fetch-http>
     <app-display-fetched-customers *ngIf="isDisplayForm"> </app-display-fetched-customers>
     <app-login-form *ngIf="isLoginForm" (isUserAuthenticated)='setAuthentication($event)'> </app-login-form>
-</div>
+    <app-showusers></app-showusers>
+  </div>
