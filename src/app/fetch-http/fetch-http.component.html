@@ -1,0 +1,20 @@
+<p> fetch-http works! </p>
+
+<table style="width:100%" border="1px">
+  <h1>User Names</h1>
+  <tr>
+    <th>Id</th>
+    <th>Username</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+  <tr *ngFor = "let user of fetchedHttpData">
+    <td *ngIf="applyUserNameConstraint(user)">{{user.id}}</td>
+    <td *ngIf="applyUserNameConstraint(user)">{{user.username}}</td>
+    <td *ngIf="applyUserNameConstraint(user)">{{user.name}}</td>
+    <td *ngIf="applyUserNameConstraint(user)">{{user.email}}</td>
+  </tr>
+  <tr *ngIf="fetchedHttpData.length === 0">
+    <td colspan="4">No users To display!</td>
+  </tr>
+</table>

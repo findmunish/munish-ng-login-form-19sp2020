@@ -1,0 +1,28 @@
+<p> display-fetched-customers works! </p>
+
+<table style="width:100%" border="1px">
+  <h1>Customer Names</h1>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Street</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip-code</th>
+  </tr>
+  <tr *ngFor = "let customer of customers">
+    <td>{{customer.firstName}}</td>
+    <td>{{customer.lastName}}</td>
+    <td>{{customer.contact.email}}</td>
+    <td>{{customer.contact.contactNum}}</td>
+    <td>{{customer.address.street}}</td>
+    <td>{{customer.address.city}}</td>
+    <td>{{customer.address.state}}</td>
+    <td>{{customer.address.zip}}</td>
+  </tr>
+  <tr *ngIf = "!customers.length">
+    <td colspan="8">No data To display!</td>
+  </tr>
+</table>

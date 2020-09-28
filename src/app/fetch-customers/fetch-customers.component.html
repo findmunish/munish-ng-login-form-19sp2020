@@ -1,0 +1,80 @@
+<p> fetch-customers works! </p>
+
+<!-- 
+<form [formGroup]="customerDataForm" (ngSubmit)="onSubmit()">
+  <h2>Input Customer Details</h2>
+  <label>First Name:
+    <input type="text" formControlName="firstName" required>
+  </label>
+  <br/>
+  <label>Last Name:
+    <input type="text" formControlName="lastName" required>
+  </label>
+  <br/>
+  <br/><br/>
+  <div formGroupName="contact">
+    <h2>Contact Details</h2>
+    <label>
+      Email:
+      <input type="text" formControlName="email" required>
+    </label>
+    <br/>
+    <label>
+      Contact Num:
+      <input type="text" formControlName="contactNum" required>
+    </label>
+    <br/>
+  </div>
+  <br/><br/>
+  <button type="submit">Submit</button>
+</form>
+-->
+<form [formGroup]="customerDataForm" (ngSubmit)="onSubmit()">
+  <h2>Input Customer Details</h2>
+  <div>
+   <label for="firstName">First Name:</label>
+   <input type="text" formControlName="firstName" required>
+  </div>
+  <br/>
+  <div>
+   <label for="lastName">Last Name:</label>
+   <input type="text" formControlName="lastName" required>
+  </div>
+  <br/>
+  <br/><br/>
+  <div formGroupName="contact">
+    <h2>Contact Details</h2>
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" formControlName="email" required>
+    </div>
+    <br/>
+    <div>
+      <label for="contactNum">Contact Number:</label>
+      <input type="text" formControlName="contactNum" required>
+    </div>
+    <br/>
+  </div>
+  <br/><br/>
+  <div formGroupName="address">
+    <h2>Address</h2>
+    <label>
+      Street:
+      <input type="text" formControlName="street" required>
+    </label>
+    <label>
+      City:
+      <input type="text" formControlName="city" required>
+    </label>
+    <label>
+      State:
+      <input type="text" formControlName="state" required>
+    </label>
+    <label>
+      Zipcode:
+      <input type="text" formControlName="zip" required>
+    </label>
+  </div>
+  <br/><br/>
+  <button type="submit">Submit</button>
+</form>
